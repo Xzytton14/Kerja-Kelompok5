@@ -3,59 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jelajahi Cilacap</title>
+    <title>Portal Kabupaten Cilacap</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: #333; line-height: 1.6; }
-        header { background: #0b3d91; color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
-        header a { color: white; text-decoration: none; margin-left: 15px; font-weight: 500; }
-        .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('URL_FOTO_TELUK_PENYU') center/cover; color: white; text-align: center; padding: 120px 20px; }
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-        .btn { display: inline-block; background: #ffbc00; color: #333; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 4px; margin-top: 20px; }
-        .section { padding: 60px 5%; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { border: 1px solid #ddd; border-radius: 8px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
-        .card h3 { color: #0b3d91; }
-        footer { background: #222; color: white; text-align: center; padding: 20px; font-size: 0.9rem; }
+        /* Gaya dasar untuk pemula */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Bagian Header (Atas) */
+        .header {
+            background-color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ddd;
+        }
+        .header-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header-menu a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #555;
+        }
+        .btn-login {
+            background-color: #eee;
+            border: 1px solid #ccc;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Bagian Hero (Sambutan) */
+        .hero {
+            background-color: #e3f2fd; /* Biru muda */
+            padding: 50px 30px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #0d47a1;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .search-box {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn-cari {
+            padding: 10px 20px;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Bagian Layanan (Kotak-kotak Menu) */
+        .layanan {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 30px;
+            flex-wrap: wrap; 
+        }
+        .kartu-layanan {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 120px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+        }
+
+        /* Bagian Konten Bawah (Berita, Kuliner, Cuaca) */
+        .konten-bawah {
+            display: flex;
+            padding: 0 30px 40px 30px;
+            gap: 20px;
+        }
+        .kolom {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1; 
+        }
+        .kolom h3 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .item-list {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #eee;
+        }
+        .keterangan {
+            font-size: 13px;
+            color: #666;
+            margin-top: 5px;
+            display: block;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h2>Explore Cilacap</h2>
-        <nav>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-logo">Portal Cilacap</div>
+        <div class="header-menu">
             <a href="#">Beranda</a>
-            <a href="#">Wisata</a>
-            <a href="#">Kuliner</a>
-        </nav>
-    </header>
-
-    <div class="hero">
-        <h1>Jelajahi Pesona Cilacap</h1>
-        <p>Menemukan keindahan tersembunyi di pesisir selatan Jawa Tengah. Perpaduan sempurna antara pesona bahari, warisan sejarah, dan kekayaan kuliner.</p>
-        <a href="#destinasi" class="btn">Mulai Petualangan</a>
+            <a href="#">Profil Kota</a>
+            <a href="#">Layanan</a>
+            <a href="#">Berita</a>
+        </div>
+        <button class="btn-login">Masuk</button>
     </div>
 
-    <div id="destinasi" class="section">
-        <h2>Destinasi Unggulan</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Pantai Teluk Penyu</h3>
-                <p>Bentangan pasir besi yang luas dengan deburan ombak khas laut selatan. Titik terbaik untuk menikmati senja.</p>
+    <!-- Hero / Sambutan -->
+    <div class="hero">
+        <p>Selamat Datang di</p>
+        <h1>Kabupaten Cilacap</h1>
+        <p>Bercahaya: Bersih, Elok, Rapi, Ceria, Hijau, Aman, dan Jaya.</p>
+        <br>
+        <input type="text" class="search-box" placeholder="Cari info pariwisata, bank, atau layanan...">
+        <button class="btn-cari">Cari</button>
+    </div>
+
+    <!-- Menu Layanan -->
+    <div class="layanan">
+        <div class="kartu-layanan">
+            <b>Layanan Publik</b>
+        </div>
+        <div class="kartu-layanan">
+            <b>Bank Terdekat</b>
+        </div>
+        <div class="kartu-layanan">
+            <b>Kesehatan</b>
+        </div>
+        <div class="kartu-layanan">
+            <b>Pendidikan</b>
+        </div>
+        <div class="kartu-layanan">
+            <b>Pariwisata</b>
+        </div>
+        <div class="kartu-layanan">
+            <b>Kuliner</b>
+        </div>
+    </div>
+
+    <!-- Konten Bawah 3 Kolom -->
+    <div class="konten-bawah">
+        <!-- Kolom 1: Berita -->
+        <div class="kolom">
+            <h3>Berita Terbaru</h3>
+            <div class="item-list">
+                <b>Festival Nelayan Teluk Penyu Digelar Meriah</b>
+                <span class="keterangan">15 Oktober 2026</span>
             </div>
-            <div class="card">
-                <h3>Benteng Pendem</h3>
-                <p>Susuri lorong waktu di benteng peninggalan Belanda tahun 1861 dengan arsitektur bawah tanah yang memukau.</p>
+            <div class="item-list">
+                <b>Perbaikan Jalan Lintas Selatan Selesai</b>
+                <span class="keterangan">10 Oktober 2026</span>
             </div>
-            <div class="card">
-                <h3>Nusakambangan</h3>
-                <p>Di balik reputasinya, pulau ini menyimpan surga tersembunyi berupa pantai berpasir putih yang asri.</p>
+        </div>
+
+        <!-- Kolom 2: Kuliner (Pengganti Agenda) -->
+        <div class="kolom">
+            <h3>Rekomendasi Kuliner</h3>
+            <div class="item-list">
+                <b>Brekecek Pathak Jahan</b>
+                <span class="keterangan">Olahan kepala ikan kaya rempah, wajib dicoba saat ke Cilacap.</span>
+            </div>
+            <div class="item-list">
+                <b>Mendoan & Sate Martawi</b>
+                <span class="keterangan">Camilan hangat dan sate ayam khas untuk menemani malam hari Anda.</span>
+            </div>
+        </div>
+
+        <!-- Kolom 3: Info & Cuaca -->
+        <div class="kolom">
+            <h3>Cuaca & Info</h3>
+            <div class="item-list" style="text-align: center; font-size: 24px;">
+                <b>29°C</b><br>
+                <span style="font-size: 14px;">Cerah Berawan</span>
+            </div>
+            <div class="item-list">
+                <b>Info Penting:</b><br>
+                <p style="font-size: 14px; margin-top: 5px;">Pendaftaran beasiswa daerah tahun 2026 telah dibuka. Silakan cek menu layanan pendidikan.</p>
             </div>
         </div>
     </div>
 
-    <footer>
-        <p>Cilacap Bercahaya. © 2026 Explore Cilacap.</p>
-    </footer>
+    <!-- Footer -->
+    <div class="footer">
+        <p>Cilacap Bercahaya © 2026 | Dibuat sebagai latihan HTML dasar.</p>
+    </div>
 
 </body>
 </html>
