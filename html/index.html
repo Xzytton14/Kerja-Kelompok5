@@ -3,198 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Kabupaten Cilacap</title>
-    <style>
-        /* Gaya dasar untuk pemula */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        /* Bagian Header (Atas) */
-        .header {
-            background-color: white;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid #ddd;
-        }
-        .header-logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .header-menu a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #555;
-        }
-        .btn-login {
-            background-color: #eee;
-            border: 1px solid #ccc;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        /* Bagian Hero (Sambutan) */
-        .hero {
-            background-color: #e3f2fd; /* Biru muda */
-            padding: 50px 30px;
-            text-align: center;
-            border-bottom: 1px solid #ccc;
-        }
-        .hero h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            color: #0d47a1;
-        }
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .search-box {
-            padding: 10px;
-            width: 300px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .btn-cari {
-            padding: 10px 20px;
-            background-color: #555;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        /* Bagian Layanan (Kotak-kotak Menu) */
-        .layanan {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            padding: 30px;
-            flex-wrap: wrap; 
-        }
-        .kartu-layanan {
-            background-color: white;
-            border: 1px solid #ddd;
-            padding: 20px;
-            width: 120px;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 40px;
-        }
-
-        /* Bagian Konten Bawah (Berita, Kuliner, Cuaca) */
-        .konten-bawah {
-            display: flex;
-            padding: 0 30px 40px 30px;
-            gap: 20px;
-        }
-        .kolom {
-            background-color: white;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 8px;
-            flex: 1; 
-        }
-        .kolom h3 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-        .item-list {
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px dashed #eee;
-        }
-        .keterangan {
-            font-size: 13px;
-            color: #666;
-            margin-top: 5px;
-            display: block;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Portal Kabupaten Cilacap Kota</title>
+    
+    <!-- KODE PENGHUBUNG KE FILE CSS -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
     <!-- Header -->
     <div class="header">
-        <div class="header-logo">Portal Cilacap</div>
+        <div class="header-logo">Portal Cilacap Kota</div>
         <div class="header-menu">
-            <a href="#">Beranda</a>
+            <a href="index.html">Beranda</a>
             <a href="#">Profil Kota</a>
             <a href="#">Layanan</a>
-            <a href="#">Berita</a>
         </div>
-        <button class="btn-login">Masuk</button>
+        <button class="btn-login" onclick="alert('Fitur Masuk belum tersedia')">Masuk</button>
     </div>
 
     <!-- Hero / Sambutan -->
     <div class="hero">
         <p>Selamat Datang di</p>
-        <h1>Kabupaten Cilacap</h1>
+        <h1>Kabupaten Cilacap Kota</h1>
         <p>Bercahaya: Bersih, Elok, Rapi, Ceria, Hijau, Aman, dan Jaya.</p>
         <br>
-        <input type="text" class="search-box" placeholder="Cari info pariwisata, bank, atau layanan...">
-        <button class="btn-cari">Cari</button>
+        <input type="text" class="search-box" id="inputCari" placeholder="Cari info pariwisata, bank, atau layanan...">
+        <button class="btn-cari" onclick="klikCari()">Cari</button>
     </div>
 
-    <!-- Menu Layanan -->
+    <!-- Menu Layanan (SUDAH DIPERBAIKI: Langsung menggunakan tag <a> agar pasti bisa diklik) -->
     <div class="layanan">
-        <div class="kartu-layanan">
-            <b>Layanan Publik</b>
-        </div>
-        <div class="kartu-layanan">
+        <a href="informasi.html" class="kartu-layanan" style="text-decoration: none; color: inherit;">
+            <b>Informasi Cilacap</b>
+        </a>
+        <a href="bank.html" class="kartu-layanan" style="text-decoration: none; color: inherit;">
             <b>Bank Terdekat</b>
-        </div>
-        <div class="kartu-layanan">
+        </a>
+        <a href="kesehatan.html" class="kartu-layanan" style="text-decoration: none; color: inherit;">
             <b>Kesehatan</b>
-        </div>
-        <div class="kartu-layanan">
+        </a>
+        <a href="pendidikan.html" class="kartu-layanan" style="text-decoration: none; color: inherit;">
             <b>Pendidikan</b>
-        </div>
-        <div class="kartu-layanan">
+        </a>
+        <a href="wisata.html" class="kartu-layanan" style="text-decoration: none; color: inherit;">
             <b>Pariwisata</b>
-        </div>
-        <div class="kartu-layanan">
+        </a>
+        <a href="kuliner.html" class="kartu-layanan" style="text-decoration: none; color: inherit;">
             <b>Kuliner</b>
-        </div>
+        </a>
     </div>
 
-    <!-- Konten Bawah 3 Kolom -->
+    <!-- Konten Bawah -->
     <div class="konten-bawah">
-        <!-- Kolom 1: Berita -->
-        <div class="kolom">
-            <h3>Berita Terbaru</h3>
-            <div class="item-list">
-                <b>Festival Nelayan Teluk Penyu Digelar Meriah</b>
-                <span class="keterangan">15 Oktober 2026</span>
-            </div>
-            <div class="item-list">
-                <b>Perbaikan Jalan Lintas Selatan Selesai</b>
-                <span class="keterangan">10 Oktober 2026</span>
-            </div>
-        </div>
-
-        <!-- Kolom 2: Kuliner (Pengganti Agenda) -->
+        <!-- Kolom 1: Kuliner -->
         <div class="kolom">
             <h3>Rekomendasi Kuliner</h3>
             <div class="item-list">
@@ -207,7 +68,7 @@
             </div>
         </div>
 
-        <!-- Kolom 3: Info & Cuaca -->
+        <!-- Kolom 2: Info & Cuaca -->
         <div class="kolom">
             <h3>Cuaca & Info</h3>
             <div class="item-list" style="text-align: center; font-size: 24px;">
@@ -226,5 +87,16 @@
         <p>Cilacap Bercahaya © 2026 | Dibuat sebagai latihan HTML dasar.</p>
     </div>
 
+    <!-- Fungsi Pencarian (Dipindahkan langsung ke sini agar tidak bentrok) -->
+    <script>
+        function klikCari() {
+            let kataKunci = document.getElementById('inputCari').value;
+            if (kataKunci === "") {
+                alert("Kolom pencarian masih kosong! Ketik sesuatu dulu ya.");
+            } else {
+                alert("Anda mencari: " + kataKunci);
+            }
+        }
+    </script>
 </body>
 </html>
