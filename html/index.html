@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Kabupaten Cilacap Kota</title>
+    
+    <!-- KODE PENGHUBUNG KE FILE CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="header-logo">Portal Cilacap Kota</div>
+        <div class="header-menu">
+            <a href="index.html">Beranda</a>
+            <a href="#">Profil Kota</a>
+            <a href="#">Layanan</a>
+        </div>
+        <button class="btn-login" onclick="alert('Fitur Masuk belum tersedia')">Masuk</button>
+    </div>
+
+    <!-- Hero / Sambutan -->
+    <div class="hero">
+        <p>Selamat Datang di</p>
+        <h1>Kabupaten Cilacap Kota</h1>
+        <p>Bercahaya: Bersih, Elok, Rapi, Ceria, Hijau, Aman, dan Jaya.</p>
+        <br>
+        <input type="text" class="search-box" id="inputCari" placeholder="Cari info pariwisata, bank, atau layanan...">
+        <button class="btn-cari" onclick="klikCari()">Cari</button>
+    </div>
+
+    <!-- Menu Layanan (SUDAH DIPERBAIKI: Langsung menggunakan tag <a> agar pasti bisa diklik) -->
+    <div class="layanan">
+        <a href="informasi.html" class="kartu-layanan" style="text-decoration: none; color: inherit;">
+            <b>Informasi Cilacap</b>
+        </a>
+        <a href="bank.html" class="kartu-layanan" style="text-decoration: none; color: inherit;">
+            <b>Bank Terdekat</b>
+        </a>
+        <a href="kesehatan.html" class="kartu-layanan" style="text-decoration: none; color: inherit;">
+            <b>Kesehatan</b>
+        </a>
+        <a href="pendidikan.html" class="kartu-layanan" style="text-decoration: none; color: inherit;">
+            <b>Pendidikan</b>
+        </a>
+        <a href="wisata.html" class="kartu-layanan" style="text-decoration: none; color: inherit;">
+            <b>Pariwisata</b>
+        </a>
+        <a href="kuliner.html" class="kartu-layanan" style="text-decoration: none; color: inherit;">
+            <b>Kuliner</b>
+        </a>
+    </div>
+
+    <!-- Konten Bawah -->
+    <div class="konten-bawah">
+        <!-- Kolom 1: Kuliner -->
+        <div class="kolom">
+            <h3>Rekomendasi Kuliner</h3>
+            <div class="item-list">
+                <b>Brekecek Pathak Jahan</b>
+                <span class="keterangan">Olahan kepala ikan kaya rempah, wajib dicoba saat ke Cilacap.</span>
+            </div>
+            <div class="item-list">
+                <b>Mendoan & Sate Martawi</b>
+                <span class="keterangan">Camilan hangat dan sate ayam khas untuk menemani malam hari Anda.</span>
+            </div>
+        </div>
+
+        <!-- Kolom 2: Info & Cuaca -->
+        <div class="kolom">
+            <h3>Cuaca & Info</h3>
+            <div class="item-list" style="text-align: center; font-size: 24px;">
+                <b>29°C</b><br>
+                <span style="font-size: 14px;">Cerah Berawan</span>
+            </div>
+            <div class="item-list">
+                <b>Info Penting:</b><br>
+                <p style="font-size: 14px; margin-top: 5px;">Pendaftaran beasiswa daerah tahun 2026 telah dibuka. Silakan cek menu layanan pendidikan.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Cilacap Bercahaya © 2026 | Dibuat sebagai latihan HTML dasar.</p>
+    </div>
+
+    <!-- Fungsi Pencarian (Dipindahkan langsung ke sini agar tidak bentrok) -->
+    <script>
+        function klikCari() {
+            let kataKunci = document.getElementById('inputCari').value;
+            if (kataKunci === "") {
+                alert("Kolom pencarian masih kosong! Ketik sesuatu dulu ya.");
+            } else {
+                alert("Anda mencari: " + kataKunci);
+            }
+        }
+    </script>
+</body>
+</html>
