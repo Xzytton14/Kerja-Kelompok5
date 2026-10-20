@@ -1,0 +1,7 @@
+
+.info-highlight {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-left: 4px solid var(--seafoam-accent, #62b6cb);
+  padding: 15px;
+  border-radius: 8px;
+}
