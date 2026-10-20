@@ -1,136 +1,355 @@
-/* Gaya dasar untuk pemula */
+/* ===================================================
+   STYLE GLOBAL & VARIABEL TEMA PANTAI CILACAP (FORMAL)
+   =================================================== */
+:root {
+  --primary-navy: #0f2c59;       /* Navy Formal / Utama */
+  --ocean-blue: #1b4965;         /* Biru Pesisir */
+  --seafoam-accent: #62b6cb;     /* Akses Highlight Air Laut */
+  --sand-bg: #f8fafc;            /* Background Terang & Clean */
+  --card-bg: #ffffff;            /* Warna Kartu Putih */
+  --text-dark: #1e293b;          /* Warna Teks Utama */
+  --text-muted: #64748b;         /* Warna Teks Keterangan */
+  --shadow-soft: 0 10px 25px -5px rgba(15, 44, 89, 0.08);
+  --shadow-hover: 0 15px 30px -5px rgba(15, 44, 89, 0.18);
+  --radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--sand-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
 }
 
-/* Bagian Header (Atas) */
+/* ===================================================
+   HEADER & NAVBAR (Konsisten untuk Semua Halaman)
+   =================================================== */
 .header {
-    background-color: white;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #ddd;
+  background-color: var(--primary-navy);
+  color: #ffffff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid var(--seafoam-accent);
 }
+
 .header-logo {
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
 }
+
 .header-menu a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #555;
+  color: #e2e8f0;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
+
+.header-menu a:hover {
+  color: var(--seafoam-accent);
+}
+
 .btn-login {
-    background-color: #eee;
-    border: 1px solid #ccc;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: var(--seafoam-accent);
+  color: var(--primary-navy);
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* Bagian Hero (Sambutan) */
-.hero {
-    background-color: #e3f2fd; /* Biru muda */
-    padding: 50px 30px;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
+.btn-login:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
 }
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    color: #0d47a1;
+
+/* ===================================================
+   HERO / BANNER UTAMA & TOPIK SPESIFIK PER HALAMAN
+   =================================================== */
+
+/* Hero Default (Beranda / Umum) */
+.hero, .hero-section {
+  background: linear-gradient(135deg, rgba(15, 44, 89, 0.88) 0%, rgba(27, 73, 101, 0.82) 100%),
+              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+  border-bottom: 4px solid var(--seafoam-accent);
 }
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
+
+/* Banner Khusus Kesehatan */
+.hero.kesehatan {
+  background: linear-gradient(135deg, rgba(15, 44, 89, 0.88) 0%, rgba(27, 73, 101, 0.82) 100%),
+              url('https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
 }
+
+/* Banner Khusus Pendidikan */
+.hero.pendidikan {
+  background: linear-gradient(135deg, rgba(15, 44, 89, 0.88) 0%, rgba(27, 73, 101, 0.82) 100%),
+              url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+}
+
+/* Banner Khusus Bank / Keuangan */
+.hero.bank {
+  background: linear-gradient(135deg, rgba(15, 44, 89, 0.88) 0%, rgba(27, 73, 101, 0.82) 100%),
+              url('https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+}
+
+/* Banner Khusus Pariwisata */
+.hero.wisata {
+  background: linear-gradient(135deg, rgba(15, 44, 89, 0.88) 0%, rgba(27, 73, 101, 0.82) 100%),
+              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+}
+
+/* Banner Khusus Kuliner */
+.hero.kuliner {
+  background: linear-gradient(135deg, rgba(15, 44, 89, 0.88) 0%, rgba(27, 73, 101, 0.82) 100%),
+              url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+}
+
+.hero h1, .hero-section .main-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p, .hero-section .desc {
+  font-size: 1.1rem;
+  color: #e2e8f0;
+}
+
+.hero-section .subtitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: var(--seafoam-accent);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Input Pencarian di Hero Beranda */
 .search-box {
-    padding: 10px;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  padding: 12px 20px;
+  width: 60%;
+  max-width: 450px;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  font-size: 0.95rem;
 }
+
 .btn-cari {
-    padding: 10px 20px;
-    background-color: #555;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  padding: 12px 25px;
+  background-color: var(--seafoam-accent);
+  color: var(--primary-navy);
+  border: none;
+  border-radius: 0 25px 25px 0;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Bagian Layanan (Kotak-kotak Menu) */
+.btn-cari:hover {
+  background-color: #ffffff;
+}
+
+/* Tombol Kembali */
+.nav-back a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 22px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.nav-back a:hover {
+  background-color: var(--seafoam-accent);
+  color: var(--primary-navy);
+}
+
+/* ===================================================
+   MENU LAYANAN (Grid Kartu Beranda)
+   =================================================== */
 .layanan {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 30px;
-    flex-wrap: wrap; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: -30px auto 40px auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
 }
+
 .kartu-layanan {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 20px;
-    width: 120px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    cursor: pointer; /* Mengubah kursor jadi tangan agar terlihat bisa diklik */
-    transition: 0.3s; /* Efek halus saat disentuh */
+  background-color: var(--card-bg);
+  padding: 22px 15px;
+  text-align: center;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  color: var(--primary-navy) !important;
 }
-/* Efek saat kotak layanan disentuh mouse */
+
 .kartu-layanan:hover {
-    background-color: #f0f8ff;
-    border-color: #0d47a1;
-    transform: translateY(-5px);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--seafoam-accent);
+  background-color: #f0f9ff;
 }
 
-/* Bagian Konten Bawah */
+/* ===================================================
+   KONTEN UTAMA & LIST (Bank, Wisata, Kuliner, dll)
+   =================================================== */
 .konten-bawah {
-    display: flex;
-    padding: 0 30px 40px 30px;
-    gap: 20px;
-    justify-content: center;
-}
-.kolom {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    flex: 1; 
-    max-width: 500px; /* Dibatasi agar tidak terlalu lebar karena sisa 2 kolom */
-}
-.kolom h3 {
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-    margin-top: 0;
-}
-.item-list {
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px dashed #eee;
-}
-.keterangan {
-    font-size: 13px;
-    color: #666;
-    margin-top: 5px;
-    display: block;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
 
-/* Footer */
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+.kolom {
+  flex: 1;
+  min-width: 300px;
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid #e2e8f0;
+}
+
+.kolom h3 {
+  color: var(--primary-navy);
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--seafoam-accent);
+  padding-bottom: 8px;
+}
+
+.item-list {
+  background-color: #f8fafc;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border-left: 4px solid var(--ocean-blue);
+}
+
+.item-list b {
+  color: var(--primary-navy);
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.keterangan {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  display: block;
+}
+
+/* ===================================================
+   HALAMAN KELOMPOK (4 Kartu Anggota)
+   =================================================== */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--primary-navy);
+  margin-bottom: 30px;
+}
+
+.grid-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--seafoam-accent);
+}
+
+.avatar {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ocean-blue), var(--primary-navy));
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  border: 3px solid var(--seafoam-accent);
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  color: var(--primary-navy);
+  margin-bottom: 5px;
+}
+
+.card .nim {
+  font-size: 0.85rem;
+  color: var(--seafoam-accent);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card .role {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ===================================================
+   FOOTER (Konsisten untuk Semua Halaman)
+   =================================================== */
+.footer, footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-navy);
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-top: 50px;
+  border-top: 3px solid var(--seafoam-accent);
 }
